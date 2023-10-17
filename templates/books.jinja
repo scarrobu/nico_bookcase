@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <title>BOOKS</title>
+</head>
+<body>
+    <h1>ZOZNAM POLOŽIEK NA DARČEKY PRE NICOLASA</h1>
+
+    <a href="{{ url_for('base') }}" class='back'>spät na úvod</a>
+    <div class='container'>
+        <ul>
+            <li>
+                <a href="{{ url_for('book_detail', book_title='Spievankovo - o povolaniach') }}">
+                <div class="book-container">
+                    <img alt='spievankovo povolania' src='static/img/spievankovo_-_o_povolaniach.png'>
+                    {% if 'Spievankovo - o povolaniach' in reservations %}
+                    <img class='reserve' alt='rezervované' src='static/img/reserve.png'>
+                    <p class='reservation-name'>Zabral(a): {{ reservations['Spievankovo - o povolaniach'] }}</p>
+                    <p class='item'>Spievankovo - o povolaniach</p>
+                    {% else %}
+                    <p class='item'>Spievankovo - o povolaniach</p>
+                    {% endif %}
+                </div>
+                </a>
+            </li>
+            
+            <li>
+                <a href="{{ url_for('book_detail', book_title='Vianoce vo svete') }}">
+                <div class="book-container">
+                    <img alt='vianoce vo svete' src='static/img/vianoce_vo_svete.png'>
+                    {% if 'Vianoce vo svete' in reservations %}
+                    <img class='reserve' alt='rezervované' src='static/img/reserve.png'>
+                    <p class='reservation-name'>Zabral(a): {{ reservations['Vianoce vo svete'] }}</p>
+                    <p class='item'>Vianoce vo svete</p>
+                    {% else %}
+                    <p class='item'>Vianoce vo svete</p>
+                    {% endif %}
+                </div>
+                </a>
+            </li>
+            
+            <li>
+                <a href="{{ url_for('book_detail', book_title='Škôlkárov kalendár Mici a Mňau') }}">
+                <div class="book-container">
+                    <img alt='mici a mnau' href='' src='static/img/škôlkárov_kalendár_mici_a_mňau.png'>
+                    {% if 'Škôlkárov kalendár Mici a Mňau' in reservations %}
+                    <img class='reserve' alt='rezervované' src='static/img/reserve.png'>
+                    <p class='reservation-name'>Zabral(a): {{ reservations['Škôlkárov kalendár Mici a Mňau'] }}</p>
+                    <p class='item'>Škôlkárov kalendár Mici a Mňau</p>
+                    {% else %}
+                    <p class='item'>Škôlkárov kalendár Mici a Mňau</p>
+                    {% endif %}
+                </div>
+                </a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('book_detail', book_title='Víla a princezna') }}">
+                <div class="book-container">
+                    <img alt='víla a princezna' src='static/img/víla_a_princezna.png'>
+                    {% if 'Víla a princezna' in reservations %}
+                    <img class='reserve' alt='rezervované' src='static/img/reserve.png'>
+                    <p class='reservation-name'>Zabral(a): {{ reservations['Víla a princezna'] }}</p>
+                    <p class='item'>Víla a princezna</p>
+                    {% else %}
+                    <p class='item'>Víla a princezna</p>
+                    {% endif %}
+                </div>
+                </a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('book_detail', book_title='Bager Kubo') }}">
+                <div class="book-container">
+                    <img alt='bager kubo' src='static/img/bager_kubo.png'>
+                    {% if 'Bager Kubo' in reservations %}
+                    <img class='reserve' alt='rezervované' src='static/img/reserve.png'>
+                    <p class='reservation-name'>Zabral(a): {{ reservations['Bager Kubo'] }}</p>
+                    <p class='item'>Bager Kubo</p>
+                    {% else %}
+                    <p class='item'>Bager Kubo</p>
+                    {% endif %}
+                </div>
+                </a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('book_detail', book_title='Spievankovo') }}">
+                <div class="book-container">
+                    <img alt='spievankovo' src='static/img/spievankovo.png'>
+                    {% if 'Spievankovo' in reservations %}
+                    <img class='reserve' alt='rezervované' src='static/img/reserve.png'>
+                    <p class='reservation-name'>Zabral(a): {{ reservations['Spievankovo'] }}</p>
+                    <p class='item'>Spievankovo</p>
+                    {% else %}
+                    <p class='item'>Spievankovo</p>
+                    {% endif %}
+                </div>
+                </a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('book_detail', book_title='Cesta do rozpravky') }}">
+                <div class="book-container">
+                    <img alt='cesta do rozpravky' src='static/img/cesta_do_rozpravky.png'>
+                    {% if 'Cesta do rozpravky' in reservations %}
+                    <img class='reserve' alt='rezervované' src='static/img/reserve.png'>
+                    <p class='reservation-name'>Zabral(a): {{ reservations['Cesta do rozpravky'] }}</p>
+                    <p class='item'>Cesta do rozpravky</p>
+                    {% else %}
+                    <p class='item'>Cesta do rozpravky</p>
+                    {% endif %}
+                </div>
+                </a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('book_detail', book_title='Vianočné spievanky s Úsmev Ankou') }}">
+                <div class="book-container">
+                    <img alt='vianocne spievanky s ÚsmevAnkou' src='static/img/vianočné_spievanky_s_úsmev_ankou.png'>
+                    {% if 'Vianočné spievanky s Úsmev Ankou' in reservations %}
+                    <img class='reserve' alt='rezervované' src='static/img/reserve.png'>
+                    <p class='reservation-name'>Zabral(a): {{ reservations['Vianočné spievanky s Úsmev Ankou'] }}</p>
+                    <p class='item'>Vianočné spievanky s Úsmev Ankou</p>
+                    {% else %}
+                    <p class='item'>Vianočné spievanky s Úsmev Ankou</p>
+                    {% endif %}
+                </div>
+                </a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('book_detail', book_title='Strašidlá samolepková knižka') }}">
+                <div class="book-container">
+                    <img alt='strašidlá' src='static/img/strašidlá_samolepková_knižka.png'>
+                    {% if 'Strašidlá samolepková knižka' in reservations %}
+                    <img class='reserve' alt='rezervované' src='static/img/reserve.png'>
+                    <p class='reservation-name'>Zabral(a): {{ reservations['Strašidlá samolepková knižka'] }}</p>
+                    <p class='item'>Strašidlá samolepková knižka</p>
+                    {% else %}
+                    <p class='item'>Strašidlá samolepková knižka</p>
+                    {% endif %}
+                </div>
+                </a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('book_detail', book_title='Morské dobrodružstvá') }}">
+                <div class="book-container">
+                    <img alt='morské dobrodružstvá' src='static/img/morské_dobrodružstvá.png'>
+                    {% if 'Morské dobrodružstvá' in reservations %}
+                    <img class='reserve' alt='rezervované' src='static/img/reserve.png'>
+                    <p class='reservation-name'>Zabral(a): {{ reservations['Morské dobrodružstvá'] }}</p>
+                    <p class='item'>Morské dobrodružstvá</p>
+                    {% else %}
+                    <p class='item'>Morské dobrodružstvá</p>
+                    {% endif %}
+                </div>
+                </a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('book_detail', book_title='Rozprávkové učenie') }}">
+                <div class="book-container">
+                    <img alt='rozprávkové učenie' src='static/img/rozprávkové_učenie.png'>
+                    {% if 'Rozprávkové učenie' in reservations %}
+                    <img class='reserve' alt='rezervované' src='static/img/reserve.png'>
+                    <p class='reservation-name'>Zabral(a): {{ reservations['Rozprávkové učenie'] }}</p>
+                    <p class='item'>Rozprávkové učenie</p>
+                    {% else %}
+                    <p class='item'>Rozprávkové učenie</p>
+                    {% endif %}
+                </div>
+                </a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('book_detail', book_title='Moje prve tvary a farby') }}">
+                <div class="book-container">
+                    <img alt='moje prve tvary a farby' src='static/img/moje_prve_tvary_a_farby.png'>
+                    {% if 'Moje prve tvary a farby' in reservations %}
+                    <img class='reserve' alt='rezervované' src='static/img/reserve.png'>
+                    <p class='reservation-name'>Zabral(a): {{ reservations['Moje prve tvary a farby'] }}</p>
+                    <p class='item'>Moje prve tvary a farby</p>
+                    {% else %}
+                    <p class='item'>Moje prve tvary a farby</p>
+                    {% endif %}
+                </div>
+                </a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('book_detail', book_title='Zvieratká v zoo') }}">
+                <div class="book-container">
+                    <img alt='zvieratká v zoo' src='static/img/zvieratká_v_zoo.png'>
+                    {% if 'Zvieratká v zoo' in reservations %}
+                    <img class='reserve' alt='rezervované' src='static/img/reserve.png'>
+                    <p class='reservation-name'>Zabral(a): {{ reservations['Zvieratká v zoo'] }}</p>
+                    <p class='item'>Zvieratká v zoo</p>
+                    {% else %}
+                    <p class='item'>Zvieratká v zoo</p>
+                    {% endif %}
+                </div>
+                </a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('book_detail', book_title='Moje prvé čísla') }}">
+                <div class="book-container">
+                    <img alt='moje prvé čísla' src='static/img/moje_prvé_čísla.png'>
+                    {% if 'Moje prvé čísla' in reservations %}
+                    <img class='reserve' alt='rezervované' src='static/img/reserve.png'>
+                    <p class='reservation-name'>Zabral(a): {{ reservations['Moje prvé čísla'] }}</p>
+                    <p class='item'>Moje prvé čísla</p>
+                    {% else %}
+                    <p class='item'>Moje prvé čísla</p>
+                    {% endif %}
+                </div>
+                </a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('book_detail', book_title='Zvieratká na farme') }}">
+                <div class="book-container">
+                    <img alt='zvieratká na farme' src='static/img/zvieratká_na_farme.png'>
+                    {% if 'Zvieratká na farme' in reservations %}
+                    <img class='reserve' alt='rezervované' src='static/img/reserve.png'>
+                    <p class='reservation-name'>Zabral(a): {{ reservations['Zvieratká na farme'] }}</p>
+                    <p class='item'>Zvieratká na farme</p>
+                    {% else %}
+                    <p class='item'>Zvieratká na farme</p>
+                    {% endif %}
+                </div>
+                </a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('book_detail', book_title='Moje prvé písmenká') }}">
+                <div class="book-container">
+                    <img alt='moje prvé písmenká' src='static/img/moje_prvé_písmenká.png'>
+                    {% if 'Moje prvé písmenká' in reservations %}
+                    <img class='reserve' alt='rezervované' src='static/img/reserve.png'>
+                    <p class='reservation-name'>Zabral(a): {{ reservations['Moje prvé písmenká'] }}</p>
+                    <p class='item'>Moje prvé písmenká</p>
+                    {% else %}
+                    <p class='item'>Moje prvé písmenká</p>
+                    {% endif %}
+                </div>
+                </a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('book_detail', book_title='Rozprávky na dobrú noc') }}">
+                <div class="book-container">
+                    <img alt='rozprávky na dobrú noc' src='static/img/rozprávky_na_dobrú_noc.png'>
+                    {% if 'Rozprávky na dobrú noc' in reservations %}
+                    <img class='reserve' alt='rezervované' src='static/img/reserve.png'>
+                    <p class='reservation-name'>Zabral(a): {{ reservations['Rozprávky na dobrú noc'] }}</p>
+                    <p class='item'>Rozprávky na dobrú noc</p>
+                    {% else %}
+                    <p class='item'>Rozprávky na dobrú noc</p>
+                    {% endif %}
+                </div>
+                </a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('book_detail', book_title='Denné činnosti') }}">
+                <div class="book-container">
+                    <img alt='denne cinnosti' src='static/img/denné_činnosti.png'>
+                    {% if 'Denné činnosti' in reservations %}
+                    <img class='reserve' alt='rezervované' src='static/img/reserve.png'>
+                    <p class='reservation-name'>Zabral(a): {{ reservations['Denné činnosti'] }}</p>
+                    <p class='item'>Denné činnosti</p>
+                    {% else %}
+                    <p class='item'>Denné činnosti</p>
+                    {% endif %}
+                </div>
+                </a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('book_detail', book_title='Krtkove príbehy') }}">
+                <div class="book-container">
+                    <img alt='krtkove pribehy' src='static/img/krtkove_príbehy.png'>
+                    {% if 'Krtkove príbehy' in reservations %}
+                    <img class='reserve' alt='rezervované' src='static/img/reserve.png'>
+                    <p class='reservation-name'>Zabral(a): {{ reservations['Krtkove príbehy'] }}</p>
+                    <p class='item'>Krtkove príbehy</p>
+                    {% else %}
+                    <p class='item'>Krtkove príbehy</p>
+                    {% endif %}
+                </div>
+                </a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('book_detail', book_title='Ľudské telo') }}">
+                <div class="book-container">
+                    <img alt='ludske telo' src='static/img/ľudské_telo.png'>
+                    {% if 'Ľudské telo' in reservations %}
+                    <img class='reserve' alt='rezervované' src='static/img/reserve.png'>
+                    <p class='reservation-name'>Zabral(a): {{ reservations['Ľudské telo'] }}</p>
+                    <p class='item'>Ľudské telo</p>
+                    {% else %}
+                    <p class='item'>Ľudské telo</p>
+                    {% endif %}
+                </div>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+
+</body>
+</html>

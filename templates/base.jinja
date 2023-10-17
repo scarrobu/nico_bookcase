@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <h1 class='uvod'>ÚVODNÉ INFORMÁCIE</h1>
+
+    <p class='middle'><strong>Vážená rodina a priatelia.</strong></p>
+    
+    <p class='middle'>Vianoce sa blížia a mnohý z vás si určite kladú otázku: "čo tomu Nicolasovi mám kúpiť pod stromček?" Samozrejme že vhodných darčekov existuje mnoho, mi sme sa však rozhodli podporiť Nica v samostatnom čítaní.</p>
+
+    <p class='middle'>K tomu poslúžia pochopiteľne knižky, ale nie hocijaké, Knižky od Albi (tie s kúzelným perom) pomáhajú deťom nie len samostatne čítať ale aj poznávať svet, ako veci fungujú, učia správne rozprávať, zabavia pesničkami alebo hrami a poskytujú množstvo komplexnej zábavy.</p>
+    <p class='middle'>Preto sme sa rozhodli vybudovať pre Nica knižnicu, primárne postavenú na knižkách od Albi. Nicolas ich má rád a rád si v nich aj sám študuje pomocou špeciálneho pera obrázky.</p>
+
+    <p class='middle'>Ak stále neviete čo by Nicolaskovi urobilo radosť, tak s knižkou od Albi neurobíte žiadnu chybu. Nicolas je teraz vo veku kedy vie povedať na všetko že to chce (samozrejme že na otázku či chce kuchynku odpovie áno, ale áno odpovie aj na otázku či chce pálenku, takže jeho nadšené áno nemá príliš veľkú váhu), ale hrá sa s minimálnym množstvom hračiek a to ešte po veľmi krátku dobu. A oblečením urobíte radosť akurát tak mamine, navyše Nico rýchlo vyrastie zo všetkého. Knihy sú rôzne, zabavia aj naučia a vydržia veľmi dlho, takže sú ideálny darček pre nášho Nicolasa.</p>
+    
+    <p class='middle'><strong>Preto som pre Vás pripravil stránku ktorá, obsahuje výber knižiek do novovznikajúcej Nicolasovej knižnice.</strong></p>
+
+    <p class='middle'>Ak teda máte záujem vybrať mu zaujímavý, náučný darček ktorý pretrvá, stačí si vybrať zo zoznamu na stránke. <strong>Na jednotlivé knihy môžete aj kliknúť čo vás prenesie na podstránku kde napíšete svoje meno a po kliknutí na "zabrať" uvidia aj ostatný členovia rodiny a priatelia že danú knižku sa už niekto rozhodol kúpiť</strong> (aby sa nestalo že Nico dostane dve rovnaké knižky od rôznych ľudí). <strong>Po kliknutí na obrázok knižky vás to prenesie priamo na stránku Albi online obchodu, ale obchod kde darček kúpite si samozrejme môžete vybrať sami.</strong></p>
+
+    <div class='button-div'>
+        <a href="{{ url_for('book_list') }}" class='button-list'>PREJISŤ NA ZOZNAM KNÍH</a>
+    </div>
+
+</body>
+
+</html>

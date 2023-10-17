@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <h1>ZOZNAM POLOŽIEK NA DARČEKY PRE NICOLASA</h1>
+    <div class="container center detail">
+        <img alt='{{ book_title }}' src='{{ url_for('static', filename='img/' + book_title|lower|replace(" ", "_") + '.png') }}'>
+        <div class="flex-container">
+                <div class="info">
+                    <h2 class="name2">{{ book_title }}</h2>
+                        <form method="post" class='name2'>
+                            <label for="user_name" class="center">Meno:</label>
+                            <input type="text" name="user_name" required>
+                            <button type="submit" class="center button">Zabrať</button>
+                        </form>
+                        
+        <div class='to-shop'>
+            <a href="{{ book_links[book_title] }}" target="_blank" class='foto-link'>stránka obchodu</a></div>
+        </div>
+            </div>
+        </div>
+    </div>
+    
+    <a href="{{ url_for('book_list') }}" class="center back">Návrat na výpis kníh</a>
+    </body>
+
+</html>
